@@ -1,0 +1,113 @@
+body {
+    background-color: azure;
+}
+
+.JumbotronBaslik {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.KonyaWebSiteLink {
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    color: red;
+}
+
+.KonyaWebSiteLink:hover {
+    color: blue;
+    padding: 3px;
+    opacity: 0.5;
+}
+
+.KonyaGezilebilcekBazıYerler {
+    background: #87cefa;
+    padding: 20px;
+}
+
+.KonyaGezilebilcekBazıYerler>li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 7px;
+}
+
+.KonyaGezilebilcekBazıYerlerLink {
+    background-color: #3399ff;
+    color: white;
+    padding: 14px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+.KonyaGezilebilcekBazıYerlerLink:hover,
+.KonyaGezilebilcekBazıYerlerLink:active {
+    background-color: aquamarine;
+    color: black;
+    font-size: large;
+}
+
+
+.AciklamaListeleme,
+.AciklamaListesi,
+.Aciklama,
+.AciklamaBaslik {
+    margin: 40px;
+}
+
+
+.AciklamaListeleme {
+    counter-reset: section;
+}
+
+.AciklamaListesi {
+    list-style-type: none;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #3399ff;
+    color: #fff;
+}
+
+.AciklamaBaslik {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.AciklamaBaslik:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background: white;
+}
+
+.Aciklama {
+    font-size: .9rem;
+    line-height: 1.4rem;
+    margin-top: 15px;
+}
+
+.AciklamaListesi::before {
+    counter-increment: section;
+    content: counter(section);
+    text-align: center;
+    display: inline-block;
+    color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -65px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    font-size: 2rem;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+}

@@ -1,0 +1,233 @@
+.SayfaBaslik {
+    width: 100%;
+    background-color: khaki;
+    padding: 30px;
+    margin: auto;
+}
+
+
+
+.SayfaBaslikicinde {
+    display: flex;
+    border: 3px solid #333333;
+    font-size: 2.5rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+    background: #ffffff;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    width: 50%;
+}
+
+.SayfaBaslikicinde::before {
+    content: '';
+    border: 2px solid #353535;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    margin: auto;
+
+}
+
+.profilFotografi {
+    display: block;
+    width: 40%;
+    height: auto;
+    margin: 10px 30px;
+    border-radius: 100px;
+}
+
+.ozgecmisYariKisim {
+    width: 30%;
+    background-color: none;
+    background-color: antiquewhite;
+    display: inline-block;
+    position: relative;
+}
+
+
+.progress-label {
+    position: relative;
+}
+
+.progress-label::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: turquoise;
+    width: 75%;
+}
+
+.progress-container {
+    position: relative;
+    display: inline-block;
+    background: #eee;
+    height: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+progress {
+    opacity: 0;
+}
+
+.ogecmisDigerYariKisim {
+    width: 60%;
+    top: 0;
+    float: right;
+}
+
+.progresss {
+    margin: 5px;
+    padding: 2px;
+    width: 15%;
+    max-width: 500px;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 15px;
+}
+
+.progresss .progresss__bar {
+    height: 100%;
+    width: 60%;
+    border-radius: 15px;
+    background: repeating-linear-gradient(135deg,
+            #036ffc,
+            #036ffc 20px,
+            #1163cf 20px,
+            #1163cf 40px);
+}
+
+.progressss {
+    margin: 5px;
+    padding: 2px;
+    width: 15%;
+    max-width: 500px;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 15px;
+}
+
+.progressss .progressss__bar {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background: repeating-linear-gradient(135deg,
+            #036ffc,
+            #036ffc 20px,
+            #1163cf 20px,
+            #1163cf 40px);
+}
+
+.progresssss {
+    margin: 5px;
+    padding: 2px;
+    width: 15%;
+    max-width: 500px;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 15px;
+}
+
+.progresssss .progresssss__bar {
+    height: 100%;
+    width: 25%;
+    border-radius: 15px;
+    background: repeating-linear-gradient(135deg,
+            #036ffc,
+            #036ffc 20px,
+            #1163cf 20px,
+            #1163cf 40px);
+}
+
+.butun-beceriYetenek {
+    margin: 0;
+    padding: 8px;
+    background-color: wheat;
+    width: 50%;
+}
+
+.butun-beceriYetenek>p .beceriYetenek {
+    margin: 10px;
+    padding: 15px;
+}
+
+.beceriYetenek {
+    background-color: ghostwhite;
+}
+
+.beceriYetenek>p {
+    margin: 15px;
+    font-size: 100%;
+}
+
+@media only screen and (max-width:700px) {
+    .ozgecmisYariKisim{
+        width: 100%;
+    }
+    .ogecmisDigerYariKisim{
+        width: 100%;
+    }
+
+    .SayfaBaslik {
+        width: 100%;
+        background-color: khaki;
+        padding: 30px;
+        margin: auto;
+    }
+    
+    
+    
+    .SayfaBaslikicinde {
+        display: flex;
+        border: 3px solid #333333;
+        font-size: 2.5rem;
+        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+        text-transform: uppercase;
+        letter-spacing: 0.2ch;
+        background: #ffffff;
+        position: relative;
+        margin: auto;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .SayfaBaslikicinde::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+        margin: auto;
+    
+    }    
+    
+    
+}

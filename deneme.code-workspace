@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../WebTeknolojiProjeKod/ResimGalerisi"
+		},
+		{
+			"path": "../ResimGalerisi"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "deneme"
+	}
+}
