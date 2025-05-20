@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffde7; /* açık sarı arka plan */
+    margin: 0;
+    padding: 0;
+    color: #2e2e2e;
+}
+
+.navbar {
+    background-color: #ffc107 !important; /* Bootstrap sarı tonu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    color: #000 !important;
+}
+
+.navbar .nav-link.active {
+    color: #fff !important;
+    background-color: #343a40;
+    border-radius: 5px;
+}
+
+.navbar .nav-link:hover {
+    color: #343a40 !important;
+}
+
+.BuyukBaslik {
+    text-align: center;
+    background-color: #fff8dc;
+    padding: 30px 10px;
+    border-bottom: 2px solid #ffeb3b;
+}
+
+.KucukBaslik {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.AltBaslik {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.TekirdagSporAmblem {
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+    border: 3px solid #ffc107;
+    border-radius: 8px;
+}
+
+.anaYapi {
+    padding: 30px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.07);
+    border-left: 6px solid #ffca28;
+    border-radius: 10px;
+}
+
+.anaYapiBaslik {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.aciklamaIlk {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+}
+
+.aciklamaSon {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fffefa;
+    padding: 30px;
+    border-left: 6px solid #ffca28;
+    box-shadow: 0 0 10px rgba(0,0,0,0.06);
+    border-radius: 10px;
+}
+
+.aciklamaSon h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.aciklamaSon ul {
+    padding-left: 20px;
+}
+
+.aciklamaSon ul li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.cardstad {
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.cardstad img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #ffc107;
+}
+
+.containerstad {
+    padding: 20px;
+    text-align: center;
+}
+
+.containerstad h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #222;
+    margin: 0;
+    font-weight: bold;
+}
+
+h2, h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #1e1e1e;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .BuyukBaslik, .anaYapi, .aciklamaSon, .cardstad {
+        padding: 15px;
+    }
+
+    .KucukBaslik {
+        font-size: 26px;
+    }
+
+    .AltBaslik {
+        font-size: 18px;
+    }
+
+    .anaYapiBaslik, .aciklamaSon h3, .containerstad h2 {
+        font-size: 20px;
+    }
+}

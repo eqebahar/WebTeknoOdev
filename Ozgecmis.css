@@ -1,233 +1,212 @@
-.SayfaBaslik {
-    width: 100%;
-    background-color: khaki;
-    padding: 30px;
-    margin: auto;
+.navbar {
+    background-color: #f8f9fa !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.navbar .nav-link {
+    color: #212529 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
 
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #dc3545 !important;
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    color: #212529 !important;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.navbar-toggler {
+    border-color: #212529;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 53, 69, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Sayfa Başlığı */
+.SayfaBaslik {
+    width: 100%;
+    background-color: #f4e3a1; /* daha soft khaki tonu */
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
 .SayfaBaslikicinde {
     display: flex;
-    border: 3px solid #333333;
-    font-size: 2.5rem;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    text-transform: uppercase;
-    letter-spacing: 0.2ch;
-    background: #ffffff;
-    position: relative;
-    margin: auto;
+    align-items: center;
     justify-content: center;
-    width: 50%;
+    border: 3px solid #333;
+    font-size: 2.5rem;
+    border-radius: 15px 40px 35px 40px / 10px 10px 20px 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    background: #fff;
+    position: relative;
+    width: 60%;
+    padding: 20px 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
 
 .SayfaBaslikicinde::before {
     content: '';
-    border: 2px solid #353535;
-    display: block;
-    width: 100%;
-    height: 100%;
+    border: 2px solid #555;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    margin: auto;
-
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1.02) rotate(0.5deg);
+    border-radius: 10px 10px 20px 40px / 15px 40px 35px 40px;
+    pointer-events: none;
 }
 
+/* Profil Fotoğrafı */
 .profilFotografi {
     display: block;
     width: 40%;
+    max-width: 250px;
     height: auto;
-    margin: 10px 30px;
-    border-radius: 100px;
+    margin: 15px 40px;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
 }
 
+.profilFotografi:hover {
+    transform: scale(1.05);
+}
+
+/* Özgeçmiş Yarı Kısım */
 .ozgecmisYariKisim {
     width: 30%;
-    background-color: none;
-    background-color: antiquewhite;
+    background-color: #faefdc;
     display: inline-block;
-    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444;
 }
 
-
-.progress-label {
-    position: relative;
+ 
+.ogecmisDigerYariKisim {
+    width: 65%;
+    float: right;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.progress-label::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.progress-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: turquoise;
-    width: 75%;
-}
-
+ 
 .progress-container {
     position: relative;
-    display: inline-block;
-    background: #eee;
-    height: 20px;
-    border-radius: 6px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    height: 22px;
     overflow: hidden;
+    margin: 12px 0;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
-progress {
-    opacity: 0;
-}
-
-.ogecmisDigerYariKisim {
-    width: 60%;
-    top: 0;
-    float: right;
-}
-
-.progresss {
-    margin: 5px;
-    padding: 2px;
-    width: 15%;
-    max-width: 500px;
-    background: white;
-    border: 3px solid #000;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 15px;
-}
-
-.progresss .progresss__bar {
+ 
+.progresss__bar, .progressss__bar, .progresssss__bar {
     height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #036ffc 25%, #1163cf 50%, #036ffc 75%);
+    background-size: 40px 40px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+.progresss__bar {
     width: 60%;
-    border-radius: 15px;
-    background: repeating-linear-gradient(135deg,
-            #036ffc,
-            #036ffc 20px,
-            #1163cf 20px,
-            #1163cf 40px);
 }
 
-.progressss {
-    margin: 5px;
-    padding: 2px;
-    width: 15%;
-    max-width: 500px;
-    background: white;
-    border: 3px solid #000;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 15px;
-}
-
-.progressss .progressss__bar {
-    height: 100%;
+.progressss__bar {
     width: 100%;
-    border-radius: 15px;
-    background: repeating-linear-gradient(135deg,
-            #036ffc,
-            #036ffc 20px,
-            #1163cf 20px,
-            #1163cf 40px);
 }
 
-.progresssss {
-    margin: 5px;
-    padding: 2px;
+.progresssss__bar {
+    width: 25%;
+}
+
+/* Progress Wrapper Styles */
+.progresss, .progressss, .progresssss {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    height: 18px;
     width: 15%;
     max-width: 500px;
-    background: white;
-    border: 3px solid #000;
-    border-radius: 20px;
+    margin: 5px 10px;
     overflow: hidden;
-    height: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.progresssss .progresssss__bar {
-    height: 100%;
-    width: 25%;
-    border-radius: 15px;
-    background: repeating-linear-gradient(135deg,
-            #036ffc,
-            #036ffc 20px,
-            #1163cf 20px,
-            #1163cf 40px);
-}
-
+/* Beceriler Kapsayıcı */
 .butun-beceriYetenek {
-    margin: 0;
-    padding: 8px;
-    background-color: wheat;
-    width: 50%;
-}
-
-.butun-beceriYetenek>p .beceriYetenek {
-    margin: 10px;
+    margin: 15px auto;
     padding: 15px;
+    background-color: #f9f0d7;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
+/* Her Beceri Kutu */
 .beceriYetenek {
-    background-color: ghostwhite;
+    background-color: #f5f9ff;
+    margin: 15px 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 
-.beceriYetenek>p {
-    margin: 15px;
-    font-size: 100%;
+.beceriYetenek:hover {
+    background-color: #e6f0ff;
 }
 
-@media only screen and (max-width:700px) {
-    .ozgecmisYariKisim{
+.beceriYetenek > p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Responsive Tasarım */
+@media only screen and (max-width: 700px) {
+    .ozgecmisYariKisim, .ogecmisDigerYariKisim {
         width: 100%;
-    }
-    .ogecmisDigerYariKisim{
-        width: 100%;
+        float: none;
+        margin: 10px 0;
     }
 
-    .SayfaBaslik {
-        width: 100%;
-        background-color: khaki;
-        padding: 30px;
-        margin: auto;
-    }
-    
-    
-    
     .SayfaBaslikicinde {
-        display: flex;
-        border: 3px solid #333333;
-        font-size: 2.5rem;
-        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-        text-transform: uppercase;
-        letter-spacing: 0.2ch;
-        background: #ffffff;
-        position: relative;
-        margin: auto;
-        justify-content: center;
-        width: 100%;
+        width: 90%;
+        font-size: 2rem;
+        padding: 15px 25px;
     }
-    
-    .SayfaBaslikicinde::before {
-        content: '';
-        border: 2px solid #353535;
+
+    .profilFotografi {
+        width: 60%;
+        margin: 20px auto;
         display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-        margin: auto;
-    
-    }    
-    
-    
+    }
+
+    .butun-beceriYetenek {
+        width: 90%;
+        padding: 15px 10px;
+    }
 }

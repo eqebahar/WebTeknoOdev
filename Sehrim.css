@@ -1,113 +1,112 @@
+/* Sehrim.css */
+
+/* Genel body ayarları */
 body {
-    background-color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Açık gri, Bootstrap uyumlu */
+    color: #212529; /* Bootstrap'in default yazı rengi */
 }
 
+/* Jumbotron başlığı */
 .JumbotronBaslik {
+    font-size: 3rem;
+    font-weight: 700;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
 }
 
-.KonyaWebSiteLink {
-    cursor: pointer;
-    list-style-type: none;
+/* Tekirdag Web Site Link */
+.TekirdagWebSiteLink {
+    color: #d6336c; /* Bootstrap'in danger/pembe tonu */
     text-decoration: none;
-    color: red;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.KonyaWebSiteLink:hover {
-    color: blue;
-    padding: 3px;
-    opacity: 0.5;
+.TekirdagWebSiteLink:hover,
+.TekirdagWebSiteLink:focus {
+    color: #842029;
+    text-decoration: underline;
 }
 
-.KonyaGezilebilcekBazıYerler {
-    background: #87cefa;
-    padding: 20px;
+/* Gezilecek yerler listesi */
+.TekirdagGezilecekYerler {
+    padding-left: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #343a40;
 }
 
-.KonyaGezilebilcekBazıYerler>li {
-    background: #cce5ff;
-    color: darkblue;
-    margin: 7px;
+.TekirdagGezilecekYerler li {
+    margin-bottom: 8px;
 }
 
-.KonyaGezilebilcekBazıYerlerLink {
-    background-color: #3399ff;
-    color: white;
-    padding: 14px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px 30px;
+/* Carousel caption text */
+.carousel-caption h2 {
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-.KonyaGezilebilcekBazıYerlerLink:hover,
-.KonyaGezilebilcekBazıYerlerLink:active {
-    background-color: aquamarine;
-    color: black;
-    font-size: large;
+/* Liste grup elemanlarının içeriği için stil */
+.TekirdagAciklamaListesi .list-group-item {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.05);
+    transition: transform 0.2s ease;
 }
 
-
-.AciklamaListeleme,
-.AciklamaListesi,
-.Aciklama,
-.AciklamaBaslik {
-    margin: 40px;
+.TekirdagAciklamaListesi .list-group-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgb(0 0 0 / 0.1);
 }
 
-
-.AciklamaListeleme {
-    counter-reset: section;
+/* Başlıklar listede */
+.TekirdagAciklamaListesi h4 {
+    font-weight: 700;
+    color: #0d6efd; /* Bootstrap primary mavisi */
 }
 
-.AciklamaListesi {
-    list-style-type: none;
-    position: relative;
-    font-size: 1.5rem;
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: #3399ff;
-    color: #fff;
+/* Responsive iframe ayarları */
+iframe.w-100 {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+.navbar {
+    background-color: #f8f9fa !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.AciklamaBaslik {
-    position: relative;
-    padding-bottom: 10px;
+.navbar .nav-link {
+    color: #212529 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
 }
 
-.AciklamaBaslik:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 25px;
-    height: 2px;
-    background: white;
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #dc3545 !important;
+    text-decoration: underline;
 }
 
-.Aciklama {
-    font-size: .9rem;
-    line-height: 1.4rem;
-    margin-top: 15px;
+.navbar-brand {
+    color: #212529 !important;
+    font-weight: 600;
+    font-size: 1.4rem;
 }
 
-.AciklamaListesi::before {
-    counter-increment: section;
-    content: counter(section);
-    text-align: center;
-    display: inline-block;
-    color: #000;
-    border-radius: 50%;
-    position: absolute;
-    left: -65px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 12px;
-    font-size: 2rem;
-    width: 25px;
-    height: 25px;
-    border: 2px solid #000;
+.navbar-toggler {
+    border-color: #212529;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 53, 69, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 767.98px) {
+    .TekirdagGezilecekYerler {
+        padding-left: 15px;
+        font-size: 1rem;
+    }
 }

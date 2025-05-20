@@ -1,0 +1,104 @@
+.navbar {
+    background-color: #f8f9fa !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link {
+    color: #212529 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #dc3545 !important;
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    color: #212529 !important;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.navbar-toggler {
+    border-color: #212529;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 53, 69, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body {
+    background-color: #e9ecef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #343a40;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    color: #212529;
+}
+
+a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #a71d2a;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #117a8b;
+    border-color: #117a8b;
+}
+
+.accordion-button {
+    background-color: #ffffff;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #dc3545;
+    color: white;
+}
+
+.carousel-caption h5 {
+    background-color: rgba(220, 53, 69, 0.75);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.container .row .col-md-12,
+.container .row .col-lg-8,
+.container .row .col-lg-4 {
+    margin-bottom: 1.5rem;
+}
+
+.etkinlikLink {
+    color: white;
+    text-decoration: none;
+}
+
+.etkinlikLink:hover {
+    color: #ffc107;
+}

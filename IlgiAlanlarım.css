@@ -1,35 +1,120 @@
-.Anacontainer {
-    background-image: url("ResimGalerisi/arka.jpeg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+    background-color: #ffffff;  /* Beyaz arka plan */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222222; /* Koyu yazı rengi */
+}
+.navbar {
+    background-color: #f8f9fa !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link {
+    color: #212529 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #dc3545 !important;
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    color: #212529 !important;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.navbar-toggler {
+    border-color: #212529;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 53, 69, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .ustcont {
-    position: relative;
+    background-color: #ffffff; /* Beyaz */
+    color: #222222;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.Anacontainer {
+    padding: 40px 15px;
+}
+
+#search-box {
+    border-radius: 0.25rem 0 0 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+#search {
+    border-radius: 0 0.25rem 0.25rem 0;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+}
+
+h1, h2, h4 {
+    color: #222222;
+    font-weight: 700;
+}
+
+.book-list {
+    margin-top: 30px;
+    background-color: #f9f9f9; /* Hafif gri kutu */
+    padding: 30px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.card-img:hover {
-    transform: scale(1.1);
+.container h2, .container h4 {
+    font-family: 'Righteous', cursive;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
 
-.card-text {
-    flex-grow: 1;
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444444;
 }
 
+blockquote {
+    font-style: italic;
+    background: #f0f0f0;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    margin: 20px 0;
+    color: #333333;
+}
+
+.list-inline-item.badge {
+    background-color: #343a40;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .ustcont {
+        padding: 20px 10px;
+    }
+
+    .book-list {
+        padding: 20px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
