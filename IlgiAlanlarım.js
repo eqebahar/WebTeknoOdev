@@ -1,91 +1,62 @@
-$(document).ready(function () {
-  var outputList = document.getElementById("list-output");
-  var newsUrl = "https://newsapi.org/v2/everything?q=";
-  var apiKey = "615a0da0b081420c9072d03772f653e6";
-  var placeHldr = "https://via.placeholder.com/150";
-  var searchData;
+document.addEventListener("DOMContentLoaded", function () {
+  const apiKey = "AIzaSyDyantRO66SvtFcK3kz7r6I4Hapa5myC0w";
+  const searchBtn = document.getElementById("search");
+  const searchBox = document.getElementById("search-box");
+  const listOutput = document.getElementById("list-output");
 
-  // listener for search button
-  $("#search").click(function () {
-      outputList.innerHTML = "";
-      document.body.style.backgroundImage = "url('')";
-      searchData = $("#search-box").val().trim();
+  searchBtn.addEventListener("click", function () {
+    const query = searchBox.value.trim();
+    listOutput.innerHTML = ""; // Önceki sonuçları temizle
 
-      if (searchData === "") {
-          displayError();
-      } else {
-          const today = new Date().toISOString().split('T')[0];  // Bugünün tarihi
-          const fiveDaysAgo = new Date();
-          fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);  // 5 gün öncesinin tarihi
-          const fiveDaysAgoString = fiveDaysAgo.toISOString().split('T')[0]; // 5 gün önceki tarih
+    if (!query) {
+      alert("Lütfen arama terimi girin!");
+      return;
+    }
 
-          const url = `${newsUrl}${encodeURIComponent(searchData)}&from=${fiveDaysAgoString}&to=${today}&sortBy=publishedAt&language=tr&apiKey=${apiKey}`;
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}&maxResults=10`;
 
-          $.ajax({
-              url: url,
-              dataType: "json",
-              success: function (response) {
-                  console.log("API Response:", response);  // Tüm yanıtı kontrol et
-                  if (response.status === "ok" && response.articles && response.articles.length > 0) {
-                      $("#title").animate({ 'margin-top': '5px' }, 1000);
-                      $(".book-list").css("visibility", "visible");
-                      displayResults(response.articles.slice(0, 10));
-                  } else {
-                      alert("Sonuç bulunamadı, tekrar deneyin!");
-                  }
-              },
-              error: function (xhr, status, error) {
-                  console.log("Error:", xhr.responseText);  // Hata yanıtını kontrol et
-                  alert("Bir hata oluştu. Lütfen tekrar deneyin!");
-              }
-          });
-      }
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data.items || data.items.length === 0) {
+          listOutput.innerHTML = `<p class="text-center">Sonuç bulunamadı.</p>`;
+          return;
+        }
 
-      $("#search-box").val(""); // temizle
-  });
+        // Her kitap için kart oluştur
+        data.items.forEach((item) => {
+          const book = item.volumeInfo;
+          const thumbnail = book.imageLinks ? book.imageLinks.thumbnail : "https://via.placeholder.com/128x195?text=No+Image";
+          const title = book.title || "Başlık yok";
+          const authors = book.authors ? book.authors.join(", ") : "Yazar bilgisi yok";
+          const description = book.description ? book.description.substring(0, 150) + "..." : "Açıklama yok";
+          const infoLink = book.infoLink || "#";
 
-  function displayResults(articles) {
-      for (var i = 0; i < articles.length; i += 2) {
-          var article1 = articles[i];
-          var article2 = articles[i + 1];
-
-          outputList.innerHTML += '<div class="row mt-4">' +
-              formatOutput(article1) +
-              (article2 ? formatOutput(article2) : '') +
-              '</div>';
-      }
-  }
-
-  function formatOutput(article) {
-    var image = article.urlToImage || placeHldr;  // Görselin URL'si veya yer tutucu
-    var title = article.title || "Başlık yok";
-    var description = article.description || "Açıklama yok";
-    var source = article.source.name || "Kaynak yok";
-    var url = article.url;
-
-    var htmlCard = `<div class="col-lg-6">
-        <div class="card">
-            <div class="row no-gutters">
+          const cardHTML = `
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="${image}" class="card-img" alt="${title}">
+                  <img src="${thumbnail}" class="card-img" alt="${title}">
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${title}</h5>
-                        <p class="card-text">${description}</p>
-                        <p class="card-text"><small class="text-muted">Kaynak: ${source}</small></p>
-                        <a target="_blank" href="${url}" class="btn btn-secondary">Haberi Oku</a>
-                    </div>
+                  <div class="card-body">
+                    <h5 class="card-title">${title}</h5>
+                    <p class="card-text"><small class="text-muted">${authors}</small></p>
+                    <p class="card-text">${description}</p>
+                    <a href="${infoLink}" target="_blank" class="btn btn-primary btn-sm">Detayları Gör</a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>`;
-    return htmlCard;
-}
+          `;
+          listOutput.insertAdjacentHTML("beforeend", cardHTML);
+        });
+      })
+      .catch((error) => {
+        console.error("Hata:", error);
+        listOutput.innerHTML = `<p class="text-center text-danger">Bir hata oluştu. Lütfen tekrar deneyin.</p>`;
+      });
 
-
-
-  function displayError() {
-      alert("Arama terimi boş olamaz!");
-  }
+    searchBox.value = ""; // Arama kutusunu temizle
+  });
 });

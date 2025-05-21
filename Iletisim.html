@@ -2,19 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
-    <link rel="stylesheet" href="Iletisim.css">
-    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title> 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Css/Iletisim.css" />
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-md navbar-light bg-light nav-pills nav-tabs">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand nav-link active">Hakkımda</a>
@@ -47,73 +43,76 @@
         </div>
     </nav>
 
-
-    <div class="Anayapi">
-        <form class="anaForm" action="Iletisim.php" method="post">
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="isim">Ad</label>
+    <div class="Anayapi container mt-4">
+        <form class="anaForm" action="Iletisim.php" method="post" novalidate>
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="isim" class="form-label">Ad</label>
                 </div>
-                <div class="DigerKisim">
-                    <input id="isim" name="Ad" type="text" placeholder="Lütfen adınızı giriniz">
-                </div>
-                <div class="message1">
-
+                <div class="DigerKisim col-md-10">
+                    <input id="isim" name="Ad" type="text" placeholder="Lütfen adınızı giriniz" required class="form-control" />
+                    <div class="message0 text-danger small"></div>
                 </div>
             </div>
 
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="soyisim">Soyad</label>
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="soyisim" class="form-label">Soyad</label>
                 </div>
-                <div class="DigerKisim">
-                    <input id="soyisim" name="Soyad" type="text" placeholder="Lütfen soyadınızı giriniz">
-                </div>
-                <div class="message2">
-
+                <div class="DigerKisim col-md-10">
+                    <input id="soyisim" name="Soyad" type="text" placeholder="Lütfen soyadınızı giriniz" required class="form-control" />
+                    <div class="message1 text-danger small"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="email">Email</label>
-                </div>
-                <div class="DigerKisim">
-                    <input id="email" name="Eposta" type="text" placeholder="Lütfen email adresiniz giriniz">
-                </div>
-                <div class="message0">
 
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="email" class="form-label">Email</label>
+                </div>
+                <div class="DigerKisim col-md-10">
+                    <input id="email" name="Eposta" type="email" placeholder="Lütfen email adresiniz giriniz" required class="form-control" />
+                    <div class="message2 text-danger small"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="Erkek Kadin Diger">Cinsiyet</label>
-                </div>
-                <div class="DigerKisim">
-                    <label for="Erkek">Erkek</label>
-                    <input id="Erkek" name="cinsiyet" value="Erkek" type="radio">
-                    <label for="Kadin">Kadın</label>
-                    <input id="Kadin" name="cinsiyet" value="Kadin" type="radio">
-                    <label for="Diger">Diğer</label>
-                    <input id="s" name="cinsiyet" value="Diger" type="radio">
-                    <div class="message3">
 
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label class="form-label">Cinsiyet</label>
+                </div>
+                <div class="DigerKisim col-md-10">
+                    <div class="form-check form-check-inline">
+                        <input id="Erkek" name="cinsiyet" value="Erkek" type="radio" required class="form-check-input" />
+                        <label for="Erkek" class="form-check-label">Erkek</label>
                     </div>
+                    <div class="form-check form-check-inline">
+                        <input id="Kadin" name="cinsiyet" value="Kadin" type="radio" required class="form-check-input" />
+                        <label for="Kadin" class="form-check-label">Kadın</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input id="Diger" name="cinsiyet" value="Diger" type="radio" required class="form-check-input" />
+                        <label for="Diger" class="form-check-label">Diğer</label>
+                    </div>
+                    <div class="message3 text-danger small mt-1"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="">Doğum tarihi</label>
+
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="dtarihi" class="form-label">Doğum tarihi</label>
                 </div>
-                <div class="DigerKisim">
-                    <input value="<?php echo date('Y-m-d'); ?>" name="dtarihi" type="date">
+                <div class="DigerKisim col-md-10">
+                    <input id="dtarihi" name="dtarihi" type="date" required class="form-control" value="<?php echo date('Y-m-d'); ?>" />
+                    <div class="message4 text-danger small"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="">Ülke</label>
+
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="Ulke" class="form-label">Ülke</label>
                 </div>
-                <div class="DigerKisim">
-                    <select name="Ulke" id="Ulke">
+                <div class="DigerKisim col-md-10">
+                    <select name="Ulke" id="Ulke" class="form-select" required>
+                        <option value="">Seçiniz</option>
                         <option value="Türkiye">Türkiye</option>
                         <option value="Amerika Birleşik Devletleri">Amerika Birleşik Devletleri</option>
                         <option value="Fransa">Fransa</option>
@@ -121,78 +120,91 @@
                         <option value="İspanya">İspanya</option>
                         <option value="İngiltere">İngiltere</option>
                     </select>
+                    <div class="message5 text-danger small"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="">Eğitim aldığınız üniversite</label>
+
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="universite" class="form-label">Eğitim aldığınız üniversite</label>
                 </div>
-                <div class="DigerKisim">
-                    <input list="Universite" name="universite" id="universite" placeholder="Seçiniz">
+                <div class="DigerKisim col-md-10">
+                    <input list="Universite" name="universite" id="universite" placeholder="Seçiniz" class="form-control" />
                     <datalist id="Universite">
-                        <option value="Sakarya Üniversitesi">Sakarya Üniversitesi</option>
-                        <option value="Sakarya Uygulamalı Bililmler Üniversitesi">Sakarya Uygulamalı Bililmler
-                            Üniversitesi</option>
-                        <option value="Kocaeli Ünivesitesi">Kocaeli Ünivesitesi</option>
-                        <option value="Eskişehir Osmangazi Üniversitesi">Eskişehir Osmangazi Üniversitesi</option>
-                        <option value="İstanbul Teknik Üniversitesi">İstanbul Teknik Üniversitesi</option>
+                        <option value="Sakarya Üniversitesi"></option>
+                        <option value="Sakarya Uygulamalı Bilimler Üniversitesi"></option>
+                        <option value="Kocaeli Üniversitesi"></option>
+                        <option value="Eskişehir Osmangazi Üniversitesi"></option>
+                        <option value="İstanbul Teknik Üniversitesi"></option>
                     </datalist>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="">Bildiğiniz Yabancı diller</label>
+
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label class="form-label">Bildiğiniz Yabancı diller</label>
                 </div>
-                <div class="DigerKisim">
-                    <label for="ingilizce">İngilizce</label>
-                    <input id="ingilizce" name="dil[]" value="ingilizce" type="checkbox">
-                    <label for="almanca">Almanca</label>
-                    <input id="almanca" name="dil[]" value="almanca" type="checkbox">
-                    <label for="ispanyolca">İspanyolca</label>
-                    <input id="ispanyolca" name="dil[]" value="ispanyolca" type="checkbox">
-                    <label for="fransızca">Fransızca</label>
-                    <input id="fransızca" name="dil[]" value="fransızca" type="checkbox">
+                <div class="DigerKisim col-md-10">
+                    <div class="form-check form-check-inline">
+                        <input id="ingilizce" name="dil[]" value="ingilizce" type="checkbox" class="form-check-input" />
+                        <label for="ingilizce" class="form-check-label">İngilizce</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input id="almanca" name="dil[]" value="almanca" type="checkbox" class="form-check-input" />
+                        <label for="almanca" class="form-check-label">Almanca</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input id="ispanyolca" name="dil[]" value="ispanyolca" type="checkbox" class="form-check-input" />
+                        <label for="ispanyolca" class="form-check-label">İspanyolca</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input id="fransizca" name="dil[]" value="fransızca" type="checkbox" class="form-check-input" />
+                        <label for="fransizca" class="form-check-label">Fransızca</label>
+                    </div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="programlamaDilleri">Bildiğiniz bir programlama dili</label>
+
+            <div class="SatirKisim row mb-3 align-items-center">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="programlamaDilleri" class="form-label">Bildiğiniz bir programlama dili</label>
                 </div>
-                <div class="DigerKisim">
-                    <select name="programlamaDilleri" id="programlamaDilleri">
+                <div class="DigerKisim col-md-10">
+                    <select name="programlamaDilleri" id="programlamaDilleri" class="form-select" required>
                         <optgroup label="Yapısal Yazılım dilleri">
                             <option value="Java">Java</option>
                             <option value="Pascal">Pascal</option>
-                            <option value="Visual Basic ">Visual Basic</option>
-                        </optgroup>>
+                            <option value="Visual Basic">Visual Basic</option>
+                        </optgroup>
                         <optgroup label="Nesneye dayalı Yazılım dilleri">
                             <option value="Python">Python</option>
                             <option value="c#">C#</option>
                             <option value="Php">Php</option>
-                        </optgroup>>
+                        </optgroup>
                     </select>
+                    <div class="message6 text-danger small"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <div class="CeyrekKisim">
-                    <label for="yorum">Açıklama</label>
-                </div>
-                <div class="DigerKisim">
-                    <textarea name="yorum" id="yorum" cols="30" rows="10" placeholder="Lütfen yazınız...."></textarea>
-                    <div class="message4">
 
-                    </div>
+            <div class="SatirKisim row mb-3">
+                <div class="CeyrekKisim col-md-2">
+                    <label for="yorum" class="form-label">Açıklama</label>
+                </div>
+                <div class="DigerKisim col-md-10">
+                    <textarea name="yorum" id="yorum" cols="30" rows="5" placeholder="Lütfen yazınız...." class="form-control"></textarea>
+                    <div class="message7 text-danger small"></div>
                 </div>
             </div>
-            <div class="SatirKisim">
-                <input type="reset" value="Reset">
-                <input name="gonder" type="submit" value="Gönder">
+
+            <div class="SatirKisim row">
+                <div class="col text-end">
+                    <input type="reset" value="Reset" class="btn btn-secondary me-2" />
+                    <input name="gonder" type="submit" value="Gönder" class="btn btn-primary" />
+                </div>
             </div>
         </form>
     </div>
+   <script src="Iletisim.js"></script>
 
-    <script src="Iletisim.js"></script>
-    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

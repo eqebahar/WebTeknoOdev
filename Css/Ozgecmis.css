@@ -1,33 +1,24 @@
+
 .navbar {
-    background-color: #f8f9fa !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffc107 !important; /* Bootstrap sarı tonu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .nav-link {
-    color: #212529 !important;
-    font-weight: 500;
-    text-transform: capitalize;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-link.active,
-.navbar .nav-link:hover {
-    color: #dc3545 !important;
-    text-decoration: underline;
-}
-
-.navbar-brand {
-    color: #212529 !important;
     font-weight: 600;
-    font-size: 1.4rem;
+    color: #000 !important;
 }
 
-.navbar-toggler {
-    border-color: #212529;
+.navbar .nav-link.active {
+    color: #fff !important;
+    background-color: #343a40;
+    border-radius: 5px;
 }
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 53, 69, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+.navbar .nav-link:hover {
+    color: #343a40 !important;
 }
+
 
 /* Sayfa Başlığı */
 .SayfaBaslik {
